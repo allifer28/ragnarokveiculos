@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* responsividade */
+@media only screen and (max-width: 768px) {
+  /* Estilos para telas menores, como smartphones */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para tablets e telas médias */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Estilos para telas maiores, como desktops */
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 500px;
+  background:rgb(0, 2, 110);
+}
+
+.content {
+  max-width: 1000px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+nav {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 24px;
+  color: cadetblue;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: cadetblue;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: cadetblue;
+}
+
+nav ul button {
+  border: 1px solid cadetblue;
+  background: transparent;
+  padding: 8px 40px;
+  cursor: pointer;
+  margin-left: 30px;
+  color: cadetblue;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+nav ul button:hover {
+  transition: background, color 0.6s;
+  background: cadetblue;
+  color: white;
+}
+
+.green-background {
+  background-color: #4CAF50; /* Cor verde */
+  color: white; /* Cor do texto */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Raio de borda arredondada */
+  width: 60%; /* Largura do retângulo */
+  margin: 20px auto; /* Centraliza o retângulo */
+  text-align: center; /* Alinha o texto ao centro */
+}
+
+.green-background h2 {
+  font-size: 24px; /* Tamanho da fonte do título */
+}
+
+.green-background p {
+  font-size: 18px; /* Tamanho da fonte do parágrafo */
+}
+
+
+.content .header-block {
+  max-width: 1000px;
+  min-width: 300px;
+  height: 450px;
+  background-image: url("images/lojafoto1.jpg"); /* Caminho relativo à pasta onde seu CSS está localizado */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+  padding: 10px;
+}
+
+.header-block img {
+  width: 30%;
+  position: absolute;
+  right: 0%;
+  bottom: 2%;
+}
+
+.header-block .text {
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+}
+
+.header-block .text h2 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  text-align: right;
+  transform: translateX(-20px);
+  transition: transform 0.5s;
+}
+
+.header-block .text p {
+  max-width: 280px;
+  color: rgb(0, 0, 0);
+  text-align: right;
+  transform: translateX(-20px);
+  transition: transform 0.4s;
+}
+
+
+section .catalog {
+  width: 100vw;
+  padding: 100px;
+}
+
+section .filter-card {
+  width: 980px;
+  height: 150px;
+  background: #ededed;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input {
+  width: 700px;
+  height: 50px;
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+  text-indent: 10px;
+}
+
+.search-button {
+  width: 150px;
+  height: 50px;
+  border-radius: 0px 4px 4px 0px;
+  border: none;
+  background: cadetblue;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: 0.2s ease;
+}
+
+.search-button:hover {
+  background: #dedede;
+  color: cadetblue;
+}
+
+.title-wrapper-catalog {
+  margin-top: 200px;
+  padding-bottom: 20px;
+}
+
+section .card-wrapper {
+  max-width: 1000px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-gap: 30px;
+  padding-top: 50px;
+}
+
+section .card-item {
+  height: 400px;
+  background: #ededed;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-content {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-item img {
+  width: 85%;
+  border-radius: 10px;
+}
+
+.card-item h4 {
+  width: 90%;
+}
+
+.card-item p {
+  width: 90%;
+  font-style: italic;
+  color: #00000070;
+}
+
+.card-item button {
+  width: 90%;
+  padding: 15px 0px;
+  border: none;
+  background: cadetblue;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.card-item button:hover {
+  background: #dedede;
+  color: cadetblue;
+}
+
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10px;
+}
+
+.about-content {
+  max-width: 960px;
+  min-width: 200px;
+  height: 500px;
+  background: #b5ffce3b;
+  margin: 0 auto;
+  border-radius: 10px;
+  z-index: 10;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  width: 25%;
+  min-width: 300px;
+  height: 100%;
+  background: #000000a1;
+  border-radius: 8px;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  background-size: auto
+  border-radius: 8px;           
+}
+
+.right {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 0%;
+}
+
+.right h3 {
+  text-align: right;
+  width: 90%;
+  margin-bottom: 17px;
+}
+
+.right p {
+  max-width: 90%;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Estilos gerais para o rodapé */
+footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Estilos para cada seção do rodapé */
+.footer-company,
+.footer-rental,
+.footer-social,
+.footer-contact {
+  flex-basis: 23%; /* Define a largura inicial de cada item */
+  margin-bottom: 20px; /* Espaçamento entre os itens */
+}
+
+.footer-company h2,
+.footer-rental h2,
+.footer-social h2,
+.footer-contact h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.footer-company h3,
+.footer-rental h4,
+.footer-social h2,
+.footer-contact p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.footer-social .social-icons {
+  margin-top: 10px; /* Espaçamento superior para os ícones sociais */
+}
+
+.footer-contact address p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+
+.header-block .text h2 {
+    border: 2px solid #00ff00; /* Espessura da borda, estilo e cor */
+    padding: 10px; /* Espaçamento interno para que a borda não fique colada no texto */
+    display: inline-block; /* Para garantir que a borda se ajuste ao tamanho do texto */
+    color: #00ff00; /* Cor do texto */
+  }
+
+.header-block .text p {
+  background-color: #000;
+  color: #00ff00;
+}
+
+/* Estilo do catálogo */
+.catalog {
+  background-color: #000;
+  color: #00ff00;
+}
+
+.title-wrapper-catalog p {
+  color: #00ff00;
+}
+
+.title-wrapper-catalog h3 {
+  color: #00ff00;
+}
+
+.search-input {
+  background-color: #000;
+  color: #00ff00;
+  border-color: #00ff00;
+}
+
+.search-button {
+  background-color: #00ff00;
+  color: #000;
+}
+
+/* Estilo dos cards */
+.card-item {
+  background-color: #000;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+}
+
+.card-content h3 {
+  color: #000000;
+}
+
+.card-content p {
+  color: #000000;
+}
+
+.card-content button {
+  background-color: #00ff00;
+  color: #000;
+}
+
+/* Estilo do about */
+.about {
+  background-color: #000;
+  color: #00ff00;
+}
+
+.title-wrapper-about p {
+  color: #00ff00;
+}
+
+.title-wrapper-about h3 {
+  color: #00ff00;
+}
+
+.about-content h3 {
+  color: #00ff00;
+}
+
+.about-content p {
+  color: #00ff00;
+}
+
+
+nav ul li a {
+  color: #000000;
+}
+
+.brand {
+  color: #000000;
+}
+
+header {
+  background-color: hsl(0, 0%, 86%);
+  color: #000000;
+}
+
+/* Exemplo de melhoria para o header */
+header {
+  background: linear-gradient(to right, #5fffa1, #006912); /* Gradiente de cores modernas */
+  height: 300px; /* Reduzir altura para uma aparência mais compacta */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.brand {
+  font-size: 32px;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f0f0f0;
+}
+
+/* Exemplo de melhoria para os cards de veículos */
+.card-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+
+  /* suavização */
+  /* Ajuste para suavizar animação após clicar nos links */
+nav ul li a {
+  color: cadetblue;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+nav ul li a:hover {
+  color: #4CAF50; /* Mudança de cor ao passar o mouse */
+}
+
+nav ul li a:focus,
+nav ul li a:active {
+  outline: none; /* Remove a borda de foco padrão */
+  color: #4CAF50; /* Cor ao clicar */
+  transform: scale(1.05); /* Ajusta o tamanho ao clicar */
+}

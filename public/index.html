@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ragnarok Veículos </title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="./scripts/script.js"></script>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ragnarok Veículos</title>
+      <style>
+        /* Estilos CSS existentes */
+        .content {
+          /* Estilos para o cabeçalho */
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <div class="content">
+          <nav>
+            <p class="brand">Ragnarok<strong>Veículos</strong></p>
+            <ul>
+              <li><a href="#catalog">Catálogo</a></li>
+              <li><a href="#about">Sobre</a></li>
+              <button data-js="login">Cadastre-se</button>
+            </ul>
+          </nav>
+          <div class="header-block">
+            <img src="images/logoragnarok.png" width="60" alt="Descrição da Imagem" />
+          </div>
+        </div>
+      </header>
+    
+      <!-- Seu conteúdo principal -->
+      <section id="catalog">
+        <!-- Conteúdo do Catálogo -->
+      </section>
+    
+      <section id="about-content">
+        <!-- Conteúdo Sobre -->
+      </section>
+    
+      <script>
+        // JavaScript para rolagem suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+      </script>
+    </body>
+    </html>
+    
+
+  <section class="catalog" id="catalog">
+    <div class="content">
+      <div class="title-wrapper-catalog">
+        <p>Arraste para baixo</p>
+        <h3>Nosso estoque</h3>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filter-card">
+        <div class="search-container">
+          <input type="text" class="search-input" id="searchInput" placeholder="Escolha sua marca favorita">
+          <div class="dropdown-content" id="myDropdown">
+            <a href="#" onclick="selectBrand('Hyundai')">Hyundai</a>
+            <a href="#" onclick="selectBrand('Chevrolet')">Chevrolet</a>
+            <a href="#" onclick="selectBrand('Ford')">Ford</a>
+            <a href="#" onclick="selectBrand('Volkswagen')">Volkswagen</a>
+            <a href="#" onclick="selectBrand('Renault')">Renault</a>
+          </div>
+        </div>
+        <button class="search-button" onclick="search()">Buscar</button>
+      </div>
+      
+      <script>
+      function search() {
+        var selectedBrand = document.getElementById("searchInput").value;
+        alert("Searching for: " + selectedBrand);
+      }
+      
+      function selectBrand(brand) {
+        document.getElementById("searchInput").value = brand;
+        document.getElementById("myDropdown").classList.remove("show");
+      }
+      
+      // Dropdown functionality
+      document.getElementById("searchInput").addEventListener("click", function() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      });
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.search-input')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
+      
+      <style>
+      /* Estilize conforme desejado */
+      .search-container {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1;}
+      
+      .show {display: block;}
+      </style>
+      
+      
+
+      <div class="card-wrapper">
+        <div class="card-item">
+          <img src="images/ix35.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>HYUNDAI IX35</h3>
+            <p>
+              HYUNDAI IX35 2.0 16V 170CV MANUAL
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Toro&modelo=Fiat Toro preto&versao=2.0 16V Turbo Diesel Ultra 4WD AT9&ano=2021&km=26.493&local=Belo Horizonte - Funcionarios&preco=149.999&imagem=../../images/toro.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/renegade.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>JEEP RENEGADE</h3>
+            <p>
+             JEEP RENEGADE LONGITUDE 1.8 FLEX AUT
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Fox&modelo=Volkswagen Fox Vermelho&versao=1.6 MSI Total Flex Connect 4P Manual&ano=2019&km=65.000&local=Belo Horizonte - Floramar&preco=45.490&imagem=../../images/fox.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/ranger.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>FORD RANGER</h3>
+            <p>
+              FORD RANGER XLT 2.5 FLEX MANUAL
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=ka&modelo=Ford Ka branco&versao=1.5 TI-VCT Flex SE Sedan Automático&ano=2020&km=28.396&local=Belo Horizonte - Nova Suissa&preco=59.999&imagem=../../images/ka.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/prisma.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Prisma</h3>
+            <p>
+              1.4 Mpfi LTZ 8V Flex 4P Automatico
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Prisma&modelo=Chevrolet Prisma preto&versao=1.4 Mpfi LTZ 8V Flex 4P Automatico&ano=2018/2019&km=26.495&local=Contagem -thiago nevez&preco=30.000&imagem=../../images/prisma.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/siena.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Siena</h3>
+            <p>
+              1.6 MSI Total Flex Connect 4P Manual
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Fox&modelo=fox vermelho&versao=1.4 Mpfi LTZ 8V Flex 4P Automatico&ano=2016&km=80&local=Riacho dos Pedros&preco=30000&imagem=../../images/fox.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/onix.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Onix</h3>
+            <p>
+              2.0 16V Turbo Diesel Ultra 4WD AT9
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Onix&modelo=Onix branco&versao=2.0 16V Turbo Diesel Ultra 4WD AT9&ano=2023&km=80&local=Belo-Horizonte - Centro&preco=32.000&imagem=../../images/onix.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/corolla2.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Corolla</h3>
+            <p>
+              1.4 Mpfi LTZ 8V Flex 4P Automatico
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Corolla&modelo=Corolla vermelho&versao=2.0 16V Turbo Diesel Ultra 4WD AT9&ano=2016&km=80&local=Belo-Horizonte - Milionarios&preco=55.690&imagem=../../images/corolla.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/hb20.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Hb20</h3>
+            <p>
+              1.4 Mpfi LTZ 8V Flex 4P Automatico
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Hb20&modelo=Hb20 monstra&versao=2.0 16V Turbo Diesel Ultra 4WD AT9&ano=2016&km=80&local=Barreiro - Cardoso&preco=130.000&imagem=../../images/hb20.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/fox2.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Fox</h3>
+            <p>
+              2.0 16V Turbo Diesel Ultra 4WD AT9
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Fox&modelo=Fox preto&versao=2.0 16V Turbo Diesel Ultra 4WD AT9&ano=2016&km=80&local=Barreiro - Cardoso&preco=38.000&imagem=../../images/fox2.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/cruze.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Cruze</h3>
+            <p>
+              1.4 Mpfi LTZ 8V Flex 4P Automatico
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Cruze&modelo=Cruze preto&versao=manual&ano=2018&km=80&local=Belo Horizonte - Pindorama&preco=70.000&imagem=../../images/cruze.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/corolla.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Corolla</h3>
+            <p>
+              1.6 MSI Total Flex Connect 4P Manual
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Corolla&modelo=Corolla Prata&versao=2.0 16V Turbo Diesel Ultra 4WD AT9&ano=2016&km=80&local=Belo-Horizonte - Milionarios&preco=55.690&imagem=../../images/corolla2.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/ccxr.PNG" alt="Car" />
+          <div class="card-content">
+            <h3>CCXR Trevita</h3>
+            <p>
+              8.9 160V Super Turbo Diesel Ultra Mega Fast 16WD AT90
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=CCXR Trevita &modelo=Koenigsegg CCXR Trevita Prateado Blindadão Super Fast&versao=5.0 160V Super Turbo Diesel Ultra Mega Fast 12WD AT90&ano=2023&km=10.000&local=Contagem - Novo Riacho&preco=14.050.000,00&imagem=../../images/ccxr.PNG">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/hb21.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Hb20</h3>
+            <p>
+              2.0 16V Turbo Diesel Ultra 4WD AT9
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Hb20&modelo=Hb20 preto vermelho&versao=manual&ano=2016&km=80&local=Riacho dos Pedros&preco=30.000&imagem=../../images/hb21.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/fox3.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Fox</h3>
+            <p>
+              1.6 MSI Total Flex Connect 4P Manual
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Fox&modelo=fox branco&versao=manual&ano=2016&km=80&local=Riacho dos Pedros&preco=35.000&imagem=../../images/fox3.jpg">Ver
+              Detalhes</button>
+          </div>
+        </div>
+        <div class="card-item">
+          <img src="images/cruze.jpg" alt="Car" />
+          <div class="card-content">
+            <h3>Cruze</h3>
+            <p>
+              2.0 16V Turbo Diesel Ultra 4WD AT9
+            </p>
+            <button type="button" data-js="button"
+              data-link="file:///C:/Users/user/Documents/javascript/treinamento%202/Projeto%20integrador%203kkkkkk/paginas/detalhes/detalhes.html?carro=Cruze&modelo=Cruze Preto&versao=manual&ano=2016&km=80&local=Riacho dos Pedros&preco=40.000&imagem=../../images/cruze.jpg">Ver
+              Detalhes</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title-wrapper-about">
+    
+        <h3>Saiba sobre a Ragnarok Veículos</h3>
+      </div>
+      <div class="about-content">
+        <div class="right">
+          <br>
+          <h3>Ragnarok Veículos: Qualidade e Economia ao seu Alcance</h3>
+          <br>
+          <p>
+            <br>Localizada em Londrina desde 2023, a Ragnarok Veículos se destaca como uma opção 
+            confiável para quem busca carros de qualidade a preços acessíveis. Nosso compromisso é oferecer uma 
+            ampla seleção de veículos que atendem às necessidades e expectativas dos nossos clientes, garantindo sempre excelência em cada compra.
+            </p>
+            <br>
+            <p> Na Ragnarok Veículos, você encontrará desde modelos populares até opções mais sofisticadas, todos criteriosamente 
+              selecionados para proporcionar a melhor relação custo-benefício. Nosso foco não é apenas vender carros, 
+              mas sim construir uma relação de confiança duradoura com nossos clientes, oferecendo transparência e suporte em todas as etapas da compra.
+            </p>
+        </div>
+        <div class="left">
+          <img src="images/about.jpg" alt="About" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="main">
+      <div class="content footer-links">
+        <div class="footer-company">
+          <h2>Whatsapp</h2>
+          <h3>(43) 98867-4226</h3>
+        </div>
+        <div class="footer-rental">
+          <h2>Horários</h2>
+          <h4>Segunda à sexta: 08:00 às 18:00</h4>
+          <h4>Sábado: 08:00 às 13:00</h4>
+          <h4>Domingo: Fechado</h4>
+        </div>
+        <div class="footer-social">
+          <h2>Redes Sociais</h2>
+          <div class="social-icons">
+            <img src="images/social.png" width="100px" alt="social" />
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h2>Endereço</h2>
+          <address>
+            <p>Avenida Duque De Caxias, N° 5155</p>
+            <p>R. Caetano Munhoz da Rocha, N° 102 - Vila Sao Caetano</p>
+            <p>Londrina - PR</p>
+          </address>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
