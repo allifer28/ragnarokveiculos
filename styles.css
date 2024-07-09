@@ -544,85 +544,38 @@ nav ul li a:active {
 
 /* RESPONSIVIDADE */
 
-/* Estilos gerais */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  overflow-x: hidden; /* Evita a barra de rolagem horizontal em telas menores */
-}
-
 /* Estilos para telas menores, como smartphones */
 @media only screen and (max-width: 768px) {
-  header {
-    height: 300px; /* Reduz a altura do cabeçalho */
-  }
-
-  .content .header-block {
-    height: 300px; /* Ajusta a altura do bloco de cabeçalho */
-  }
-
-  .header-block img {
-    width: 40%; /* Ajusta o tamanho da imagem do cabeçalho */
-  }
-
-  nav ul {
-    flex-direction: column; /* Altera a direção do menu para uma coluna */
-    align-items: center; /* Centraliza os itens do menu */
-  }
-
-  nav ul li {
-    padding: 10px 0; /* Espaçamento vertical menor nos itens do menu */
+  .header-block {
+    height: 300px;
   }
 
   .search-input {
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 100%;
+    border-radius: 4px;
+    text-indent: 5px;
   }
 
   .filter-card {
-    width: 100%; /* Ajusta a largura do filtro */
-    padding: 20px 10px; /* Espaçamento interno menor */
+    width: 100%;
+    padding: 10px;
   }
 
   .card-item {
-    width: 100%; /* Faz com que os cards ocupem toda a largura */
-  }
-}
-
-/* Estilos para tablets e telas médias */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .search-input {
-    width: 80%; /* Reduz ligeiramente a largura do input de busca */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
-  .filter-card {
-    width: 90%; /* Ajusta a largura do filtro */
-  }
-}
-
-/* Estilos para telas maiores, como desktops */
-@media only screen and (min-width: 1025px) {
-  .content {
-    padding: 20px; /* Aumenta o espaçamento interno para telas maiores */
+  .card-content {
+    padding: 10px;
   }
 
-  .header-block img {
-    width: 25%; /* Ajusta o tamanho da imagem do cabeçalho */
+  .about-content {
+    flex-direction: column-reverse;
   }
 
-  .search-input {
-    width: 500px; /* Define uma largura fixa para o input de busca */
-  }
-
-  .filter-card {
-    width: 800px; /* Ajusta a largura do filtro */
-  }
-
-  .card-item {
-    width: calc(50% - 20px); /* Calcula o tamanho dos cards para ocuparem 2 por linha */
+  .footer-links {
+    flex-direction: column;
+    text-align: center;
   }
 }
