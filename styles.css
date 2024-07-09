@@ -583,3 +583,127 @@ nav ul li a:active {
     text-align: center;
   }
 }
+
+/* Normalize */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+button[data-js="login"] {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-block img {
+        width: 50px;
+    }
+}
+
+/* Estilo para telas muito pequenas */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card-item {
+    height: auto;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Estilo para telas médias */
+@media (min-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .card-item {
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    flex-direction: row;
+  }
+
+  .left {
+    width: 40%;
+  }
+
+  .right {
+    width: 60%;
+  }
+}
+
+/* Estilo para telas grandes */
+@media (min-width: 960px) {
+  .card-item {
+    width: calc(25% - 20px);
+  }
+
+  .left {
+    width: 30%;
+  }
+
+  .right {
+    width: 70%;
+  }
+}
