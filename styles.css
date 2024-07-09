@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-/* responsividade */
-@media only screen and (max-width: 768px) {
-  /* Estilos para telas menores, como smartphones */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Estilos para tablets e telas médias */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
 }
 
-@media only screen and (min-width: 1025px) {
-  /* Estilos para telas maiores, como desktops */
+.example {
+  -webkit-display: flex; /* Safari */
+  display: flex;
 }
 
 
