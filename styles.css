@@ -12,6 +12,7 @@
   }
 }
 
+
 .example {
   -webkit-display: flex; /* Safari */
   display: flex;
@@ -31,6 +32,8 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+
+
 
 header {
   width: 100%;
@@ -79,7 +82,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: cadetblue;
+  color: rgb(0, 0, 0);
 }
 
 nav ul button {
@@ -95,7 +98,7 @@ nav ul button {
 
 nav ul button:hover {
   transition: background, color 0.6s;
-  background: rgb(0, 138, 11);
+  background: rgb(0, 58, 3);
   color: white;
 }
 
@@ -121,28 +124,30 @@ nav ul button:hover {
 .content .header-block {
   max-width: 1000px;
   min-width: 300px;
-  height: 450px;
+  height: 300px;
   background-image: url("images/lojafoto1.jpg"); /* Caminho relativo à pasta onde seu CSS está localizado */
   background-size: cover;
   background-position: center;
-  border-radius: 8px;
+  border-radius: 15px;
+  opacity: 1; /* Corrigido */
   box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 10;
   padding: 10px;
 }
 
-.header-block img {
-  width: 30%;
-  position: absolute;
-  right: 0%;
-  bottom: 2%;
-}
-
 .header-block .text {
   position: absolute;
   bottom: 30%;
   left: 15%;
+}
+
+.header-block img {
+  width: 15%;
+  position: absolute;
+  border-radius: 7px;
+  right: 2%;
+  bottom: 6%;
 }
 
 .header-block .text h2 {
@@ -468,7 +473,7 @@ footer {
 
 
 nav ul li a {
-  color: #000000;
+  color: #ffffff;
 }
 
 .brand {
@@ -482,7 +487,7 @@ header {
 
 /* Exemplo de melhoria para o header */
 header {
-  background: linear-gradient(to right, #5fffa1, #006912); /* Gradiente de cores modernas */
+  background: linear-gradient(to right, #00ac1d, #00ac1d); /* Gradiente de cores modernas */
   height: 300px; /* Reduzir altura para uma aparência mais compacta */
 }
 
@@ -587,43 +592,7 @@ nav ul li a:active {
 /* Normalize */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-/* Header */
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-button[data-js="login"] {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
 
 /* Responsividade */
 @media (max-width: 768px) {
