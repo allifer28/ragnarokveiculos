@@ -9,6 +9,34 @@
 </head>
 
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Popup</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="cookies-box">
+      <p class="cookies__text">
+        Para proteger e melhorar a sua experiência no site, nós utilizamos cookies e dados 
+        pessoais de acordo com nossos Termos de Uso e Política de Privacidade. Ao navegar 
+        pela nossa plataforma, você declara estar ciente dessas condições.
+        <a class="cookies__link" href="#">Leia</a>
+      </p>
+      <div class="cookies__buttons">
+        <button id="acceptBtn" class="cookies__btn cookies__btn--accept">
+          Aceitar
+        </button>
+        <button class="cookies__btn cookies__btn--decline">Rejeitar</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!DOCTYPE html>
 <html>
     <head>
         <body>
@@ -136,7 +164,9 @@
       <section id="about-content">
         <!-- Conteúdo Sobre -->
       </section>
-    
+  
+
+
       <script>
         // JavaScript para rolagem suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
