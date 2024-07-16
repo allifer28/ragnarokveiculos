@@ -24,6 +24,7 @@ body {
   margin: 0 auto;
   color: #ffffff;
   transition: all 0.3s ease;
+  z-index: 1000;
 }
 .cookies-box.show {
   bottom: 25px;
