@@ -1,0 +1,14 @@
+{
+  "name": "ragnarok-veiculos",
+  "version": "1.0.0",
+  "description": "Ragnarok Veículos - Concessionária de carros usados",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
